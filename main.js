@@ -2,17 +2,15 @@ function selectionSort(numbers) {
 	
 	for (var i = 0; i < numbers.length;i++) {
 		
-		var minValue = numbers[i];
 		var minValueIndex = i;
 		
 		for (var j = i; j < numbers.length - 1; j++) {
-			if (minValue > numbers[j + 1]) {
-				minValue = numbers[j + 1];
+			if (numbers[minValueIndex] > numbers[j + 1]) {
 				minValueIndex = j + 1;
 			}
 		}
 		
-		if (minValue != numbers[i]) {
+		if (minValueIndex != i) {
 			// Swap the data
 			var temp = numbers[i];
 			numbers[i] = numbers[minValueIndex];
